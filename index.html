@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Intégration d'une maquette de site de présentation d'une entreprise de développement web. Maquette trouvée sur figma et intégrée en HTML/CSS.">
+  <meta name="keywords" content="intégration HTML, HTML, CSS, front-end, figma, web design">
+  <meta name="author" content="Emma Blanchard">
+
+  <meta property="og:title" content="Intégration Figma - Emma Blanchard">
+  <meta property="og:description" content="Intégration HTML/CSS d'une maquette Figma.">
+  <!-- <meta property="og:image" content="assets/img/preview.png"> -->
+  <meta property="og:url" content="https://emma-blnch.github.io/urlsite">
+
+  <title>Intégration maquette figma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- En-tête / Navigation -->
+  <header>
+    <a href="#intro">
+      <img src="assets/img/EB_Logo-dark.png" alt="Logo du site" id="logo" loading="lazy">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#intro">About us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#case-studies">Case studies</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#contact">Hire</a></li>
+      </ul>
+      <a href="#contact" class="btn">Contact us</a>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+
+    <!-- Intro / About -->
+    <section id="intro">
+      <div class="text">
+        <h1>Great product is built by great teams</h1>
+        <p>We help build and manage a team of world-class developers to bring your vision to life</p>
+        <a href="#services" class="btn">Let’s get started!</a>
+      </div>
+      <div class="img">
+        <img src="assets/img/web-develoment-icon.png" alt="Illustration d'équipe travaillant sur un projet">
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services we offer</h2>
+      <div class="services">
+        <div class="service-card">
+          <h3>Web design & Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        </div>
+        <div class="service-card">
+          <h3>Software Testing Service</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        </div>
+        <div class="service-card">
+          <h3>Mobile App Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partenaires -->
+    <section id="partners">
+      <div class="informations">
+        <div class="text">
+          <h2>Leading companies trust us to develop software</h2>
+          <p>We add development capacity to tech teams. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc nulla, faucibus quis porta et, convallis a libero.</p>
+          <a href="#case-studies" class="btn">See more information</a>
+        </div>
+        <div class="video">
+          <video src="assets/video/working-on-project.mp4" controls poster="assets/img/video-poster.png" loading="lazy">
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+          </video>
+        </div>
+      </div>
+      <div class="partners-list">
+        <h2>Meet the people we are working with</h2>
+        <div class="partners-logos">
+          <img src="assets/img/logos/logo_apple.png" alt="Logo partenaire 1" loading="lazy">
+          <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 2" loading="lazy">
+          <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
+          <img src="assets/img/logos/logo_apple.png" alt="Logo partenaire 4" loading="lazy">
+          <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 5" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages / Retours clients -->
+    <section id="feedback">
+      <div class="text">
+        <h2>Why customers love working with us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc nulla, faucibus quis porta et, convallis a libero.</p>
+      </div>
+      <div class="feedbacks">
+        <div class="feedback-card">
+          <img src="assets/img/imran.png" alt="Portrait de Imran Khan" loading="lazy">
+          <h5>Imran Khan</h5>
+          <p>Software engineer</p>
+        </div>
+        <div class="feedback-card">
+          <img src="assets/img/matthieu.png" alt="Portrait de Matthieu Montbrous" loading="lazy">
+          <h5>Matthieu Montbrous</h5>
+          <p>Total Energies</p>
+        </div>
+        <div class="feedback-card">
+          <img src="assets/img/alice.png" alt="Portrait de Alice Mercier" loading="lazy">
+          <h5>Alice Mercier</h5>
+          <p>Artist Cosmetics</p>
+        </div>
+        <div class="feedback-card">
+          <img src="assets/img/sophie.png" alt="Portrait de Sophie Vitré" loading="lazy">
+          <h5>Sophie Vitré</h5>
+          <p>Data scientist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Études de cas -->
+    <section id="case-studies">
+        <h2>Our recent <br>Case studies</h2>
+        <div class="study-card">
+            <div class="img">
+                <img src="assets/img/mobile-mockup.webp" alt="mobile-mockup">
+            </div>
+            <div class="text">
+                <h3>Website design for SFC Pandas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate, lacus lectus semper felis...</p>
+                <a href="#" class="btn-link">Read more ></a>
+            </div>
+        </div>
+        <div class="study-card">
+            <div class="img">
+                <img src="assets/img/mobile-mockup.webp" alt="mobile-mockup">
+            </div>
+            <div class="text">
+                <h3>Website design for SFC Pandas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate, lacus lectus semper felis...</p>
+                <a href="#" class="btn-link">Read more ></a>
+            </div>
+        </div>  
+        <div class="study-card">
+            <div class="img">
+                <img src="assets/img/mobile-mockup.webp" alt="mobile-mockup">
+            </div>
+            <div class="text">
+                <h3>Website design for SFC Pandas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate, lacus lectus semper felis...</p>
+                <a href="#" class="btn-link">Read more ></a>
+            </div>
+         </div>
+        <a href="#" class="btn">Read more case studies ></a>
+    </section>
+
+    <!-- Façon de faire (Way of building) -->
+    <section id="build">
+      <h2>Way of building <br>Great software</h2>
+
+      <!-- Étape 1 -->
+      <div class="step">
+        <div class="text">
+          <div class="presentation">
+            <h4>Build the right team to scale</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate, lacus lectus semper felis...</p>
+          </div>
+          <div class="testimony">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate.”</p>
+            <img src="assets/img/profil-pic1.png" alt="Photo de profil 1" loading="lazy">
+            <p class="name">Jeva Martins</p>
+            <p class="role">CEO</p>
+          </div>
+        </div>
+        <div class="img">
+          <img src="assets/img/team-meeting.jpg" alt="Équipe en plein travail" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="step">
+        <div class="text">
+          <div class="presentation">
+            <h4>Brainstorming ideas and refining</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate...</p>
+          </div>
+          <div class="testimony">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate.”</p>
+            <img src="assets/img/profil-pic2.png" alt="Photo de profil 2" loading="lazy">
+            <p class="name">Jeva Martins</p>
+            <p class="role">CEO</p>
+          </div>
+        </div>
+        <div class="img">
+          <img src="assets/img/brainstorming.jpg" alt="Équipe en séance de brainstorming" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="step">
+        <div class="text">
+          <div class="presentation">
+            <h4>Deliver and iterate fast</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate, lacus interdum laoreet vulputate...</p>
+          </div>
+          <div class="testimony">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate.”</p>
+            <img src="assets/img/profil-pic3.png" alt="Photo de profil 3" loading="lazy">
+            <p class="name">Jeva Martins</p>
+            <p class="role">CEO</p>
+          </div>
+        </div>
+        <div class="img">
+          <img src="assets/img/customer.jpg" alt="Présentation de projet à l'équipe" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach">
+      <h2>Our design and <br>development approach</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis malesuada turpis, vitae venenatis lectus commodo ac. Proin efficitur, mauris in pulvinar porta, magna nisi egestas dui, eget bibendum risus orci vitae tortor.</p>
+      <ul>
+        <li>UI/UX Prototyping</li>
+        <li>Agile Development</li>
+        <li>Continuous Integration</li>
+        <li>Quality Assurance</li>
+      </ul>
+    </section>
+
+    <!-- Stack technique -->
+    <section id="stack">
+      <h2>Our Tech Stack</h2>
+      <p>Nous utilisons une stack moderne et fiable :</p>
+      <ul>
+        <li>Front-end : HTML, CSS (Sass), JavaScript (React, Vue…)</li>
+        <li>Back-end : Node.js, Python (Django, Flask), PHP (Laravel)</li>
+        <li>Base de données : MySQL, PostgreSQL, MongoDB</li>
+        <li>DevOps : Docker, Kubernetes, CI/CD, Cloud (AWS, GCP, Azure)</li>
+      </ul>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section id="how-it-works">
+      <h2>How it works</h2>
+      <ol>
+        <li>Nous discutons de votre projet et de vos besoins.</li>
+        <li>Nous formons l’équipe idéale pour le réaliser.</li>
+        <li>Nous livrons en cycles courts et recueillons vos retours.</li>
+        <li>Nous finalisons et assurons le suivi après livraison.</li>
+      </ol>
+      <a href="#contact" class="btn">Ready to get started?</a>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <h2>Latest Blog Posts</h2>
+      <div class="blog-post">
+        <h3>Optimizing Your Web App</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit enim sit amet purus aliquam...</p>
+        <a href="#" class="btn-link">Read more ></a>
+      </div>
+      <div class="blog-post">
+        <h3>Top 10 UX Tips for 2025</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit enim sit amet purus aliquam...</p>
+        <a href="#" class="btn-link">Read more ></a>
+      </div>
+      <div class="blog-post">
+        <h3>Using AI to Improve Your Product</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit enim sit amet purus aliquam...</p>
+        <a href="#" class="btn-link">Read more ></a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>Pour toute question ou demande de devis, n’hésitez pas à nous contacter via le formulaire ci-dessous :</p>
+      <form action="#" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+    
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>Copyright 2025 K Design. All rights reserved.</p>
+  </footer>
+
+  <!-- Script pour les animations ou la logique JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>

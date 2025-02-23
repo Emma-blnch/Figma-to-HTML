@@ -1,0 +1,28 @@
+/* Importation des polices */
+@font-face {
+    font-family: "matter";
+    src: url(assets/font/matter/Matter-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "matter-thin";
+    src: url(assets/font/matter/Matter-Light.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "matter-bold";
+    src: url(assets/font/matter/Matter-Bold.ttf);
+    font-display: swap;
+}
+
+/* Reglages globaux */
+body {
+    font-family: "matter", sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #333;
+}
