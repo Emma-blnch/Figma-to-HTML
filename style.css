@@ -25,4 +25,275 @@ body {
     padding: 0;
     background: white;
     color: #333;
+    list-style: none;
+}
+
+main a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HEADER */
+header {
+    background: white;
+    border-bottom: 1px solid rgba(167, 167, 167, 0.219);
+    box-shadow: 0px 16px 20px 0px rgba(37, 37, 37, 0.062);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header img {
+    width: 8%;
+    height: 8%;
+    margin: 15px 25px;
+    align-self: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+nav ul a:hover {
+    color: blue;
+}
+
+header .btn {
+    padding: 15px 25px;
+    background: rgb(131, 52, 157);
+    color: white;
+    text-decoration: none;
+    font-family: "matter", sans-serif;
+    font-size: 1.1rem;
+    border-radius: 7px;
+    margin: 20px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .btn:hover {
+    background: rgb(187, 74, 224);
+}
+
+/* INTRO */
+#intro {
+    background: white;
+    display: flex;
+    margin: 30px;
+    gap: 10px;
+    align-items: center;
+}
+
+#intro .text {
+    width: 50%;
+    padding: 80px 0 80px 80px;
+}
+
+#intro .img {
+    width: 50%;
+    padding: 80px 80px 80px 0;
+}
+
+#intro .img img {
+    width: 90%;
+}
+
+#intro .text h1 {
+    font-size: 2.2rem;
+    font-family: "matter-thin", sans-serif;
+    font-weight: 30;
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+#intro .text p {
+    font-size: 1.1rem;
+    line-height: 34px;
+    font-family: "matter-thin", sans-serif;
+    font-weight: 30;
+}
+
+#intro .text a {
+    background: rgb(45, 128, 254);
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px 25px;
+    border-radius: 7px;
+}
+
+#intro .text a:hover {
+    background: rgb(14, 101, 232);
+}
+
+/* SERVICES */
+#services {
+    padding: 10px 40px;
+    background: whitesmoke;
+    border-bottom: 1.5px solid rgba(167, 167, 167, 0.219);
+    border-top: 1.5px solid rgba(167, 167, 167, 0.219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services h2 {
+    font-size: 1.9rem;
+    font-family: "matter-bold", sans-serif;
+    font-weight: 70;
+    padding-top: 10px;
+}
+
+.services {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    font-family: "matter-thin", sans-serif;
+    font-size: 1rem;
+    text-align: start;
+    line-height: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px rgba(37, 37, 37, 0.062);
+    width: 30%;
+    margin: 15px;
+}
+
+.service-card img {
+    width: 15%;
+    margin-top: 20px;
+    border: 0.8px solid rgb(237, 77, 255);
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: rgb(151, 16, 172);
+    font-family: "matter", sans-serif;
+}
+
+.service-card:hover {
+    border: 1px solid rgb(237, 77, 255);
+    transition: 0.3s ease;
+    transform: translateY(15px)
+}
+
+/* PARTNERS */
+#partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#partners .informations {
+    display: flex;
+    gap: 30px;
+    margin: 60px;
+}
+
+#partners .informations .text {
+    width: 50%;
+}
+
+#partners .informations .video {
+    width: 50%;
+}
+
+.video video {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.informations .text h2 {
+    font-size: 1.9rem;
+    line-height: 40px;
+    font-family: "matter-thin", sans-serif;
+}
+
+.informations .text p {
+    font-size: 1.3rem;
+}
+
+.informations .text a {
+    font-size: 1.3rem;
+    color: rgb(97, 9, 179);
+}
+
+.informations .text a:hover {
+    color: rgb(173, 90, 251);
+}
+
+#partners .partners-list {
+    font-family: "matter-thin", sans-serif ;
+}
+
+.partners-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.partners-list h2 {
+    font-size: 1.9rem;
+    line-height: 40px;
+    margin: 60px 10px;
+    padding-left: 40px;
+}
+
+.partners-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: whitesmoke;
+    padding: 45px 20px;
+}
+
+.partners-logos img {
+    width: 10%;
+    height: 10%;
+}
+
+/* FEEDBACK */
+#feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+    font-family: "matter-thin", sans-serif;
+}
+
+#feedback .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#feedback .text h2 {
+    font-size: 1.9rem;
+}
+
+#feedback .text p {
+    font-size: 1.3rem;
+}
+
+.feedbacks {
+    display: flex;
+    margin-top: 20px;
 }
