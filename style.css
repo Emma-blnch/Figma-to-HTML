@@ -35,50 +35,70 @@ main a {
     transition: 0.3s;
 }
 
+.decorative-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(56deg, #5f1f5c, #bb33b7, #c9532a);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.title-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(56deg, #5f1f5c, #bb33b7, #c9532a);
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+
 /* HEADER */
 header {
     background: white;
     border-bottom: 1px solid rgba(167, 167, 167, 0.219);
     box-shadow: 0px 16px 20px 0px rgba(37, 37, 37, 0.062);
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 15px 60px 20px 60px;
+    z-index: 1000;
     width: 100%;
+    position: fixed;
 }
 
 header img {
-    width: 8%;
-    height: 8%;
-    margin: 15px 25px;
-    align-self: center;
+    width: 6%;
+    height: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
-    gap: 50px;
+    gap: 45px;
+    margin: 0;
 }
 
-nav ul a {
+nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "matter", sans-serif;
+    transition: color 0.3s ease;
 }
 
-nav ul a:hover {
-    color: blue;
+nav ul li a:hover {
+    color: #7c3dc5;
 }
 
 header .btn {
-    padding: 15px 25px;
-    background: rgb(131, 52, 157);
+    padding: 12px 22px;
+    background: linear-gradient(41deg, #410975, rgba(92, 51, 204, 0.95), rgba(102, 100, 250, 0.95));
     color: white;
     text-decoration: none;
-    font-family: "matter", sans-serif;
-    font-size: 1.1rem;
-    border-radius: 7px;
-    margin: 20px 25px;
-    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
@@ -90,39 +110,51 @@ header .btn:hover {
 #intro {
     background: white;
     display: flex;
-    margin: 30px;
-    gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    padding: 100px 60px;
+    margin-bottom: 50px;
+}
+
+#intro .decorative-circle {
+    top: 695px;
+    left: 530px;
 }
 
 #intro .text {
     width: 50%;
-    padding: 80px 0 80px 80px;
-}
-
-#intro .img {
-    width: 50%;
-    padding: 80px 80px 80px 0;
-}
-
-#intro .img img {
-    width: 90%;
+    padding-left: 200px;
+    margin-top: 40px;
 }
 
 #intro .text h1 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
+    font-family: "matter-bold", sans-serif;
+    line-height: 1.3;
+    /* font-weight: 30; */
+    /* width: 100%; */
+    /* text-align: justify; */
+    /* margin: 0 auto; */
+}
+
+#intro .text h1 .thin {
+    font-weight: 300;
     font-family: "matter-thin", sans-serif;
-    font-weight: 30;
-    width: 100%;
-    text-align: justify;
-    margin: 0 auto;
+}
+
+#intro .text h1 .gradient {
+    font-weight: 800;
+    background: linear-gradient(90deg, #5c2d91, #ff7eb3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #intro .text p {
-    font-size: 1.1rem;
-    line-height: 34px;
+    font-size: 1.2rem;
+    line-height: 1.6;
     font-family: "matter-thin", sans-serif;
     font-weight: 30;
+    margin: 20px 0 40px 0;
 }
 
 #intro .text a {
@@ -130,17 +162,28 @@ header .btn:hover {
     color: white;
     font-size: 0.9rem;
     padding: 15px 25px;
-    border-radius: 7px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 #intro .text a:hover {
-    background: rgb(14, 101, 232);
+    background: rgb(10, 73, 168);
+}
+
+#intro .img {
+    width: 50%;
+    padding-right: 200px;
+    margin-top: 60px;
+}
+
+#intro .img img {
+    width: 100%;
 }
 
 /* SERVICES */
 #services {
     padding: 10px 40px;
-    background: whitesmoke;
+    background: #f9f9f9;
     border-bottom: 1.5px solid rgba(167, 167, 167, 0.219);
     border-top: 1.5px solid rgba(167, 167, 167, 0.219);
     display: flex;
@@ -149,84 +192,145 @@ header .btn:hover {
 }
 
 #services h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-family: "matter-bold", sans-serif;
     font-weight: 70;
     padding-top: 10px;
+    margin-bottom: 50px;
 }
 
 .services {
     display: flex;
-    margin-bottom: 50px;
+    /* justify-content: space-between; */
+    gap: 10px;
+    margin-bottom: 40px;
+    justify-content: center;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .service-card {
     font-family: "matter-thin", sans-serif;
     font-size: 1rem;
-    text-align: start;
     line-height: 20px;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 25px;
+    border-radius: 10px;
     box-shadow: 0px 0px 20px 5px rgba(37, 37, 37, 0.062);
-    width: 30%;
-    margin: 15px;
-}
-
-.service-card img {
-    width: 15%;
-    margin-top: 20px;
-    border: 0.8px solid rgb(237, 77, 255);
-    border-radius: 100%;
-    padding: 20px;
-}
-
-.service-card h3 {
-    font-size: 1.3rem;
-    color: rgb(151, 16, 172);
-    font-family: "matter", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    width: 350px;
+    height: 300px;
+    margin: 0 20px;
+    border: 2px solid transparent;
+    flex-shrink: 0;
 }
 
 .service-card:hover {
-    border: 1px solid rgb(237, 77, 255);
-    transition: 0.3s ease;
-    transform: translateY(15px)
+    border-image: linear-gradient(90deg, #5c2d91, #ff7eb3) 1;
+    transform: translateY(15px);
+}
+
+.service-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 20px;
+    border: 0.8px solid #ff7eb3;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "matter", sans-serif;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    transition: background 0.3s ease, -webkit-text-fill-color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    background: linear-gradient(90deg, #5c2d91, #ff7eb3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: linear-gradient(90deg, #5c2d91, #ff7eb3);
 }
 
 /* PARTNERS */
 #partners {
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#partners .informations {
-    display: flex;
-    gap: 30px;
-    margin: 60px;
+#partners .decorative-circle {
+    margin-bottom: 1185px;
+    margin-right: 1200px;
 }
 
-#partners .informations .text {
+.informations {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px;
+    padding: 0 40px;
+}
+
+.informations .text {
     width: 50%;
 }
 
-#partners .informations .video {
+.informations .video {
     width: 50%;
 }
 
 .video video {
     width: 100%;
     border-radius: 20px;
+    max-width: 700px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .informations .text h2 {
-    font-size: 1.9rem;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 1.5;
     font-family: "matter-thin", sans-serif;
+    margin-bottom: 40px;
+}
+
+.informations .text h2 .strong {
+    font-family: "matter-bold", sans-serif;
 }
 
 .informations .text p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.informations .text p .colored {
+    color: #bb33b7;
 }
 
 .informations .text a {
@@ -238,20 +342,23 @@ header .btn:hover {
     color: rgb(173, 90, 251);
 }
 
-#partners .partners-list {
-    font-family: "matter-thin", sans-serif ;
-}
-
 .partners-list {
     display: flex;
     flex-direction: column;
+    font-family: "matter-thin", sans-serif ;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.partners-list .title-line {
+    margin-left: 111px;
 }
 
 .partners-list h2 {
     font-size: 1.9rem;
     line-height: 40px;
     margin: 60px 10px;
-    padding-left: 40px;
+    padding-left: 101px;
 }
 
 .partners-logos {
@@ -259,14 +366,22 @@ header .btn:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    background: whitesmoke;
+    gap: 60px;
+    background: #f9f9f9;
+    border-bottom: 1.5px solid rgba(167, 167, 167, 0.219);
+    border-top: 1.5px solid rgba(167, 167, 167, 0.219);
     padding: 45px 20px;
+    width: 100%;
+}
+
+.partners-logos .decorative-circle {
+    margin-top: 970px;
+    margin-left: 1600px;
 }
 
 .partners-logos img {
-    width: 10%;
-    height: 10%;
+    width: 100px;
+    height: auto;
 }
 
 /* FEEDBACK */

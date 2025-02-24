@@ -39,13 +39,17 @@
     <!-- Intro / About -->
     <section id="intro">
       <div class="text">
-        <h1>Great product is <br>built by great teams</h1>
+        <h1>
+          <span class="thin">Great</span> <span class="gradient">Product</span> <span class="thin">is</span><br>
+          built by great <span class="gradient">teams</span>
+        </h1>
         <p>We help build and manage a team of world-class developers <br>to bring your vision to life</p>
-        <a href="#services" class="btn">Let’s get started!</a>
+        <a href="#services" class="btn">Let's get started!</a>
       </div>
       <div class="img">
         <img src="assets/img/web-develoment-icon.png" alt="Illustration d'équipe travaillant sur un projet">
       </div>
+      <div class="decorative-circle"></div>
     </section>
 
     <!-- Services -->
@@ -67,32 +71,59 @@
           <h3>Mobile App Development</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem.</p>
         </div>
-        <div class="service-dots"></div>
+        <div class="service-card">
+          <img src="assets/img/EB_Logo-dark.png" alt="icon-mobile-app">
+          <h3>Software Testing Service</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem.</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/img/EB_Logo-dark.png" alt="icon-mobile-app">
+          <h3>Web design & Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultrices nisl vitae dapibus. Integer non dictum lorem.</p>
+        </div>
       </div>
+      <div class="service-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
     </section>
 
     <!-- Partenaires -->
     <section id="partners">
+      <div class="decorative-circle"></div>
       <div class="informations">
         <div class="text">
-          <h2>Leading companies trust us <br><strong>to develop software</strong></h2>
-          <p>We add development capacity to tech teams. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc nulla, faucibus quis porta et, convallis a libero.</p>
+          <div class="title-line"></div>
+          <h2>Leading companies trust us <br><span class="strong">to develop software</span></h2>
+          <p>We <span class="colored">add development capacity</span> to tech teams. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc nulla, faucibus quis porta et, convallis a libero.</p>
           <a href="#case-studies" class="btn">See more information ></a>
         </div>
         <div class="video">
-          <video src="assets/video/working-on-project.mp4" controls poster="assets/img/video-poster.png" loading="lazy">
+          <video src="assets/video/working-on-project.mp4" controls poster="assets/img/team-meeting.jpg" loading="lazy">
             Votre navigateur ne supporte pas la lecture de vidéos HTML5.
           </video>
         </div>
       </div>
       <div class="partners-list">
+        <div class="title-line"></div>
         <h2>Meet the people <br><strong>we are working with</strong></h2>
         <div class="partners-logos">
+          <div class="decorative-circle"></div>
           <img src="assets/img/logos/logo_apple.png" alt="Logo partenaire 1" loading="lazy">
           <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 2" loading="lazy">
           <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
           <img src="assets/img/logos/logo_apple.png" alt="Logo partenaire 4" loading="lazy">
           <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 5" loading="lazy">
+          <img src="assets/img/logos/logo_apple.png" alt="Logo partenaire 1" loading="lazy">
+          <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 2" loading="lazy">
+          <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
+          <img src="assets/img/logos/logo_Sorbonne.png" alt="Logo partenaire 2" loading="lazy">
+          <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
+          <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
+          <img src="assets/img/logos/logo_TotalEnergies.png" alt="Logo partenaire 3" loading="lazy">
         </div>
       </div>
     </section>
@@ -239,26 +270,12 @@
 
     <!-- Stack technique -->
     <section id="stack">
-      <h2>Our Tech Stack</h2>
-      <p>Nous utilisons une stack moderne et fiable :</p>
-      <ul>
-        <li>Front-end : HTML, CSS (Sass), JavaScript (React, Vue…)</li>
-        <li>Back-end : Node.js, Python (Django, Flask), PHP (Laravel)</li>
-        <li>Base de données : MySQL, PostgreSQL, MongoDB</li>
-        <li>DevOps : Docker, Kubernetes, CI/CD, Cloud (AWS, GCP, Azure)</li>
-      </ul>
+
     </section>
 
     <!-- Comment ça marche -->
     <section id="how-it-works">
-      <h2>How it works</h2>
-      <ol>
-        <li>Nous discutons de votre projet et de vos besoins.</li>
-        <li>Nous formons l’équipe idéale pour le réaliser.</li>
-        <li>Nous livrons en cycles courts et recueillons vos retours.</li>
-        <li>Nous finalisons et assurons le suivi après livraison.</li>
-      </ol>
-      <a href="#contact" class="btn">Ready to get started?</a>
+
     </section>
 
     <!-- Blog -->
@@ -283,20 +300,7 @@
 
     <!-- Contact -->
     <section id="contact">
-      <h2>Contact us</h2>
-      <p>Pour toute question ou demande de devis, n’hésitez pas à nous contacter via le formulaire ci-dessous :</p>
-      <form action="#" method="post">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
+      
     </section>
     
   </main>
