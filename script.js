@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     
     // Sélectionne tous les liens du menu
-    const menuLinks = document.querySelectorAll("nav ul li a");
+    const menuLinks = document.querySelectorAll("nav ul li");
 
     menuLinks.forEach(link => {
         link.addEventListener("click", function(event) {
@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const targetSection = document.getElementById(sectionId);
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                    // window.scrollTo({
-                    //     top: targetSection.offsetTop - 50, // Ajuste le scroll pour tenir compte du menu fixe
-                    //     behavior: "smooth"
-                    // });
                 }
             }
         });
@@ -32,60 +28,141 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ------------> Animation des cartes de services qui defilent
-document.addEventListener("DOMContentLoaded", function() {
-    /* === Animation des services === */
+document.addEventListener("DOMContentLoaded", function () {
     const servicesContainer = document.querySelector(".services");
+    const serviceCards = Array.from(document.querySelectorAll(".service-card"));
     const dots = document.querySelectorAll(".dot");
-    let serviceIndex = 2;
-    const totalServices = dots.length;
-    const serviceWidth = 280 + 20; // Largeur d'une carte + espace
+    let serviceWidth = serviceCards[0].offsetWidth + 20; // Largeur d'une carte + espace
+    let serviceIndex = 0;
+    let autoSlide;
 
-    function updateServiceSlide(index) {
-        servicesContainer.style.transition = "transform 0.6s ease-in-out";
+    // Duplique les cartes pour créer l'effet infini
+    serviceCards.forEach((card) => {
+        let clone = card.cloneNode(true);
+        servicesContainer.appendChild(clone);
+    });
+
+    function updateServiceSlide(index, instant = false) {
+        servicesContainer.style.transition = instant ? "none" : "transform 0.6s ease-in-out";
         servicesContainer.style.transform = `translateX(${-index * serviceWidth}px)`;
 
+        // Mise à jour des points d'indicateur
         dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
+            dot.classList.toggle("active", i === (index % serviceCards.length));
         });
 
         serviceIndex = index;
     }
 
+    function nextSlide() {
+        serviceIndex++;
+        updateServiceSlide(serviceIndex);
+
+        if (serviceIndex >= serviceCards.length) {
+            setTimeout(() => {
+                serviceIndex = 0;
+                updateServiceSlide(serviceIndex, true);
+            }, 600);
+        }
+    }
+
+    function prevSlide() {
+        if (serviceIndex <= 0) {
+            serviceIndex = serviceCards.length - 1;
+            updateServiceSlide(serviceIndex, true);
+        }
+        serviceIndex--;
+        updateServiceSlide(serviceIndex);
+    }
+
+    // Gère les clics sur les points
     dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
-            updateServiceSlide(index);
+            serviceIndex = index;
+            updateServiceSlide(serviceIndex);
+            resetAutoSlide();
         });
     });
 
-    setInterval(() => {
-        let nextIndex = (serviceIndex + 1) % totalServices;
-        updateServiceSlide(nextIndex);
-    }, 5000);
-
-    /* === Animation des logos partenaires === */
-    const partnersContainer = document.querySelector(".partners-logos");
-    const partnerLogos = document.querySelectorAll(".partners-logos img");
-    let partnerIndex = 0;
-    const logoWidth = partnerLogos[0].clientWidth + 30; // Largeur d'un logo + espace
-
-    function updatePartnerSlide(index) {
-        partnersContainer.style.transition = "transform 0.6s ease-in-out";
-        partnersContainer.style.transform = `translateX(${-index * logoWidth}px)`;
-        partnerIndex = index;
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 5000);
     }
 
-    document.querySelector(".partners-arrow.left").addEventListener("click", () => {
-        partnerIndex = (partnerIndex - 1 + partnerLogos.length) % partnerLogos.length;
-        updatePartnerSlide(partnerIndex);
-    });
+    autoSlide = setInterval(nextSlide, 5000);
 
-    document.querySelector(".partners-arrow.right").addEventListener("click", () => {
-        partnerIndex = (partnerIndex + 1) % partnerLogos.length;
-        updatePartnerSlide(partnerIndex);
-    });
+    // Initialisation pour bien commencer à la 3e carte
+    updateServiceSlide(serviceIndex, true);
+});
+// document.addEventListener("DOMContentLoaded", function () {
+//     const servicesContainer = document.querySelector(".services");
+//     const serviceCards = Array.from(document.querySelectorAll(".service-card"));
+//     const dots = document.querySelectorAll(".dot");
+    
+//     let serviceWidth = serviceCards[0].offsetWidth + 20; // Largeur d'une carte + espace
+//     let serviceIndex = 0;
+//     let autoSlide;
+    
+//     // Duplique les premières cartes pour créer un effet de boucle infinie
+//     serviceCards.forEach((card) => {
+//         let clone = card.cloneNode(true);
+//         servicesContainer.appendChild(clone);
+//     });
 
-    setInterval(() => {
-        let nextIndex = (partnerIndex + 1) % partnerLogos.length;
-        updatePartnerSlide(nextIndex);
-    }, 4000);
+//     function updateServiceSlide(index, instant = false) {
+//         servicesContainer.style.transition = instant ? "none" : "transform 0.6s ease-in-out";
+//         servicesContainer.style.transform = `translateX(${-index * serviceWidth}px)`;
+
+//         // Mise à jour des points d'indicateur
+//         dots.forEach((dot, i) => {
+//             dot.classList.toggle("active", i === (index % serviceCards.length));
+//         });
+
+//         serviceIndex = index;
+//     }
+
+//     function nextSlide() {
+//         serviceIndex++;
+//         updateServiceSlide(serviceIndex);
+
+//         // Si on atteint la fin, on remet à zéro de façon fluide
+//         if (serviceIndex >= serviceCards.length / 2) {
+//             setTimeout(() => {
+//                 serviceContainer.style.transition = "none";
+//                 serviceIndex = 0;
+//                 updateServiceSlide(serviceIndex, true);
+//             }, 600);
+//         }
+//     }
+
+//     // Gère les clics sur les points
+//     dots.forEach((dot, index) => {
+//         dot.addEventListener("click", () => {
+//             serviceIndex = index;
+//             updateServiceSlide(serviceIndex);
+//             resetAutoSlide();
+//         });
+//     });
+
+//     function resetAutoSlide() {
+//         clearInterval(autoSlide);
+//         autoSlide = setInterval(nextSlide, 5000);
+//     }
+
+//     autoSlide = setInterval(nextSlide, 5000);
+
+//     // Initialisation pour bien commencer à la première carte
+//     updateServiceSlide(serviceIndex, true);
+// });
+
+// -------> ANimation defilement logos
+document.addEventListener("DOMContentLoaded", function () {
+    const logosContainer = document.querySelector(".partners-logos");
+    const logos = Array.from(logosContainer.children);
+
+    // Duplique les logos pour assurer un défilement infini sans espace vide
+    logos.forEach(logo => {
+        const clone = logo.cloneNode(true);
+        logosContainer.appendChild(clone);
+    });
 });
