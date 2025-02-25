@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "About us": "intro",
         "Services": "services",
         "Case studies": "case-studies",
-        "How it works": "how-it-works",
-        "Hire": "contact",
-        "Blog": "blog"
+        "Testimonies": "feedback",
+        "Hire": "hire",
     };
     
     // Sélectionne tous les liens du menu
@@ -166,3 +165,35 @@ document.addEventListener("DOMContentLoaded", function () {
         logosContainer.appendChild(clone);
     });
 });
+
+// ---------> Animation enlever icon play quand vidéo se lance
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".video video"); // Sélectionne la vidéo
+    const playIconContainer = document.querySelector(".play-icon"); // Sélectionne le conteneur de l'icône Play
+    const playIcon = document.getElementById("play-icon"); // Sélectionne l'image de l'icône Play
+
+    // Fonction pour afficher/masquer l'icône Play
+    function togglePlayIcon() {
+        if (video.paused) {
+            playIconContainer.style.opacity = "1"; // Rendre l'icône visible
+        } else {
+            playIconContainer.style.opacity = "0"; // Cacher l'icône
+        }
+    }
+
+    // Démarrer la vidéo en cliquant sur l'icône
+    playIconContainer.addEventListener("click", function () {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+        togglePlayIcon();
+    });
+
+    // Cacher l'icône Play lorsque la vidéo démarre
+    video.addEventListener("play", togglePlayIcon);
+    video.addEventListener("pause", togglePlayIcon);
+});
+
+
