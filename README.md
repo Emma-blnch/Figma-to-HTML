@@ -1,32 +1,38 @@
 # 🎨 Figma to HTML - Software Company Landing Page
 
-🔗 [Voir la démo en ligne](https://emma-blnch.github.io/Figma-to-HTML/)
+🔗 [Live Demo](https://emma-blnch.github.io/Figma-to-HTML/)
 
 ## 📌 Description
-Ce projet est une **intégration HTML/CSS/JS** d'une maquette **Figma**, inspirée d'un site de présentation pour une entreprise tech.
+This is a **HTML/CSS integration** of a **Figma** mockup, inspired by a website for a tech company.
 
-L'objectif était de **reproduire fidèlement** la maquette et d'ajouter des animations pour améliorer l'UX/UI.
+The goal was to **faithfully reproduce** the original design while ensuring a responsive and optimized user experience.
 
-## 🚀 Technologies utilisées
-- **HTML5** - Structure du site
+## 🚀 Tech stack
+- **HTML5** - structure
 - **CSS3** (Flexbox, Grid, animations)
-- **JavaScript** (animations, carrousel, interactions)
-- **GitHub Pages** - Hébergement du projet
+- **JavaScript** (smooth animations)
+- **GitHub Pages** - hosting
 
-## ✨ Fonctionnalités
-✔ Navigation fluide avec scroll animé  
-✔ Effets au survol et animations CSS  
-✔ Carrousel automatique des services et partenaires   
-✔ Responsive design (mobile-friendly)  
+## ✨ Features
+✔ Smooth navigation with animated scroll  
+✔ Hover effects and CSS animations  
+✔ Automatic carousel of services and partners   
+✔ Responsive design (mobile-friendly) -- IN PROGRESS    
 
-## 📸 Aperçu
-![Aperçu du projet](assets/img/preview.png)
+## 📸 Overview
+![Project overview](assets/img/preview.png)
 
-## 🎨 Maquette Figma
+## 🎨 Figma Mock-up
+You can find the mock-up at the source of the project under the name “SoftwareCompanyWebsite.png”.
 
-Vous pouvez retrouver la maquette à la source du projet sous le nom "SoftwareCompanyWebsite.png".
-
-## 📂 Installation locale
+## 📂 How to use
 Si vous souhaitez tester le projet en local :
-1. Clonez ce dépôt : git clone https://github.com/Emma-blnch/Figma-to-HTML.git
-2. Ouvrez `index.html` dans votre navigateur.
+1. Clone this repo : git clone https://github.com/Emma-blnch/Figma-to-HTML.git
+2. Open `index.html` in your browser.
+
+## 📬 Contact
+💡 If you have feedback or suggestions, feel free to reach out!
+
+📧 Email: emma.blnch4@gmail.com
+🔗 Portfolio: emma-blnch.github.io
+💼 LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/emmablnch/)
