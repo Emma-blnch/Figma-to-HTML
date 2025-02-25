@@ -16,8 +16,7 @@ L'objectif était de **reproduire fidèlement** la maquette et d'ajouter des ani
 ## ✨ Fonctionnalités
 ✔ Navigation fluide avec scroll animé  
 ✔ Effets au survol et animations CSS  
-✔ Carrousel automatique des services et partenaires  
-✔ Formulaire d'inscription interactif  
+✔ Carrousel automatique des services et partenaires   
 ✔ Responsive design (mobile-friendly)  
 
 ## 📸 Aperçu
