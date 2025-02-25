@@ -22,16 +22,9 @@ L'objectif était de **reproduire fidèlement** la maquette et d'ajouter des ani
 ## 📸 Aperçu
 ![Aperçu du projet](assets/img/preview.png)
 
-## 🎨 Comparaison : Maquette Figma vs Intégration HTML/CSS
+## 🎨 Maquette Figma
 
-Voici un aperçu de l'intégration comparée à la maquette originale :
-
-📌 **À gauche : Maquette Figma**  
-📌 **À droite : Intégration en HTML/CSS/JS**
-
-![Comparaison Maquette vs Code](assets/img/comparaison.png)
-
-Sinon vous pouvez aussi retrouvez la maquette à la source du projet sous le nom "SoftwareCompanyWebsite.png".
+Vous pouvez retrouver la maquette à la source du projet sous le nom "SoftwareCompanyWebsite.png".
 
 ## 📂 Installation locale
 Si vous souhaitez tester le projet en local :
