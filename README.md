@@ -31,7 +31,7 @@ Voici un aperçu de l'intégration comparée à la maquette originale :
 
 ![Comparaison Maquette vs Code](assets/img/comparaison.png)
 
-Sinon vous pouvez aussi retrouvez la maquette à la source du projet sous le nom "".
+Sinon vous pouvez aussi retrouvez la maquette à la source du projet sous le nom "SoftwareCompanyWebsite.png".
 
 ## 📂 Installation locale
 Si vous souhaitez tester le projet en local :
