@@ -667,3 +667,145 @@ footer {
     font-size: 1rem;
     padding: 20px;
 }
+
+/* ----------------- MEDIA QUERIES ------------------- */
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+    /* Ajustement global */
+    body {
+        font-size: 1.2rem;
+    }
+
+    /* HEADER */
+    header {
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    header img {
+        width: 10%;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    header .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    /* INTRO */
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    #intro .text {
+        width: 100%;
+        padding: 0;
+    }
+
+    #intro .img {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* SERVICES */
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .service-dots {
+        display: none;
+    }
+
+    .service-card {
+        width: 90%;
+        height: auto;
+    }
+
+    /* PARTNERS */
+    .informations {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .informations .text, .informations .video {
+        width: 100%;
+    }
+
+    .informations .text h2 {
+        text-align: left;
+    }
+
+    /* TÉMOIGNAGES */
+    .feedbacks {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feedbacks img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .feedbacks .stars img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* CASE STUDIES */
+    .study-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .study-card .img, .study-card .text {
+        width: 100%;
+    }
+
+    .study-card .text {
+        display: flex;
+        align-items: center;
+    }
+
+    .study-card .text p {
+        max-width: 100%;
+    }
+
+    /* HIRE */
+    .hire {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hire .text, .hire .img {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

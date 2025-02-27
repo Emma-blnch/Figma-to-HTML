@@ -17,7 +17,7 @@ The goal was to **faithfully reproduce** the original design while ensuring a re
 ✔ Smooth navigation with animated scroll  
 ✔ Hover effects and CSS animations  
 ✔ Automatic carousel of services and partners   
-✔ Responsive design (mobile-friendly) -- IN PROGRESS    
+✔ Responsive design (mobile-friendly)    
 
 ## 📸 Overview
 ![Project overview](assets/img/preview.png)
