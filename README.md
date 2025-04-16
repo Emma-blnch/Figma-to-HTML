@@ -26,7 +26,7 @@ The goal was to **faithfully reproduce** the original design while ensuring a re
 You can find the mock-up at the source of the project under the name “SoftwareCompanyWebsite.png”.
 
 ## 📂 How to use
-Si vous souhaitez tester le projet en local :
+If you wish to test the project locally :  
 1. Clone this repo : git clone https://github.com/Emma-blnch/Figma-to-HTML.git
 2. Open `index.html` in your browser.
 
